@@ -1,0 +1,16 @@
+packages <- c("ggplot2", "dplyr", "tidyverse", "RCurl")
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())))  
+}
+
+# WD <- getwd()
+# if (!is.null(WD)) setwd("J:/RStudio")
+# set_dir <- "/Task2"
+
+
+library(RCurl)
+library(tidyverse)
+
+df <- read.csv("https://raw.githubusercontent.com/wegmann/R_data/master/Steigerwald_sample_points_all_data_subset_withNames.csv",header=TRUE,sep=",")
+
+df$S2.1[length((df$S2.1))-1]
