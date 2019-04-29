@@ -85,7 +85,6 @@ calc.BAI2 <- function(Band4, Band6, Band7, Band8, Band12){
     (((Band12 - Band8) / sqrt(Band12+Band8)) + 1))
 }
 
-croplist <- list.files(datadir, pattern = "crop", full.names = T) 
 datelist <- sort(datelist) # sort here, given that the identifier in front of the name (line 39 ff.)
                            # may sort the files by name, not by date
 
